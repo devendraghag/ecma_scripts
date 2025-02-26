@@ -1,0 +1,14 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>Default Params</h1>
+    </body>
+    <script>
+        function add(a,b,c=222) {
+            return a+b+c;
+        }
+        console.warn(add(111,222)); // first element can not be the default value
+    </script>
+</html>
