@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title>Ecma script Tutorial</title>
+</head>
+<body>
+    <h1>Finate function</h1>
+    <script>
+console.log(isFinite(100));         // true (finite number)
+console.log(isFinite(-50.5));       // true (finite number)
+console.log(isFinite(0));           // true (0 is finite)
+console.log(isFinite('123'));       // true (converted to number)
+console.log(isFinite('hello'));     // false (not a number)
+console.log(isFinite(NaN));         // false (NaN is not finite)
+console.log(isFinite(Infinity));    // false (infinity is not finite)
+console.log(isFinite(-Infinity));   // false (negative infinity is not finite)
+console.log(isFinite(undefined));   // false (not a number)
+console.log(isFinite(null));        // true (null is treated as 0, which is finite)
+
+
+
+    //Number more accurate
+    console.log(Number.isFinite(100));       // true
+console.log(Number.isFinite('123'));     // false (string is not a number)
+console.log(Number.isFinite(NaN));       // false
+console.log(Number.isFinite(Infinity));  // false
+console.log(Number.isFinite(null));      // false (null is not a number)
+
+
+    </script>
+</body>
+</html>
