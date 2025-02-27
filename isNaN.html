@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>Ecma script Tutorial</title>
+</head>
+<body>
+    <h1>NanN function</h1>
+    <script>
+    console.log(isNaN(123));        // false (valid number)
+    console.log(isNaN('123'));      // false (string can be converted to a number)
+    console.log(isNaN('abc'));      // true (not a number)
+    console.log(isNaN(NaN));        // true (NaN itself)
+    console.log(isNaN(undefined));  // true (cannot be converted to a number)
+    console.log(isNaN('123abc'));   // true (not a pure number)
+    console.log(isNaN(true));       // false (true is converted to 1, which is a number)
+
+
+    //Number more accurate
+    console.log(Number.isNaN(NaN));        // true
+    console.log(Number.isNaN('abc'));      // false (string is not NaN)
+    console.log(Number.isNaN(undefined));  // false (not NaN)
+    console.log(Number.isNaN('123'));      // false (string is not NaN)
+
+    </script>
+</body>
+</html>
