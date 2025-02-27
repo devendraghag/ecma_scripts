@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lexical Scope Example</title>
+</head>
+<body>
+
+    <h1>Lexical Scope Example</h1>
+    <button onclick="displayMessage()">Click Me</button>
+    <p id="output"></p>
+
+    <script>
+        // Outer function
+        function outerFunction() {
+            let outerVariable = "I am from outer function";
+
+            // Nested function (inner function)
+            function innerFunction() {
+                // Accessing outer function's variable
+                document.getElementById("output").innerText = outerVariable;
+            }
+
+            return innerFunction;
+        }
+
+        // Store the inner function in a variable
+        const displayMessage = outerFunction(); 
+
+    </script>
+
+</body>
+</html>
